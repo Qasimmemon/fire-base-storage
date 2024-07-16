@@ -10,7 +10,7 @@ body {
 
 .profile-container {
     background-color: white;
-     max-width: 300px;
+     width: 500px;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -29,7 +29,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    min-width: 300px;
 }
 .form-container h2 {
     margin-bottom: 20px;
@@ -50,19 +50,8 @@ body {
     border-radius: 5px;
     box-sizing: border-box;
 }
-.form-group button {
-    width: 100%;
-    padding: 10px;
-    background-color: #28a745;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-}
-.form-group button:hover {
-    background-color: #218838;
-}
+
+
 .profile-header {
     background-color: #128c7e;
     padding: 20px;
@@ -107,21 +96,7 @@ body {
     border-top: 1px solid #ddd;
 }
 
-.message-btn,
-.call-btn {
-    background-color: #25d366;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
-.message-btn:hover,
-.call-btn:hover {
-    background-color: #20b558;
-}
 .first{
     display: grid;
     grid-template-columns: repeat(2,1fr);
@@ -130,3 +105,68 @@ body {
 #country{
     width: 120px;
 }
+
+
+
+
+
+
+
+
+
+#colom{
+    display: flex;
+    flex-direction: column-reverse;
+ } 
+ #submit{
+    margin: 0px auto;
+ }
+
+
+
+ .button {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #149CEA;
+    outline: none;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    /* background-color: #212121; */
+    transition: 0.5s;
+    transform-origin: center;
+  }
+  
+  .button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    /* background-color: #212121; */
+    transition: 0.5s;
+  }
+  
+  .button:hover::before, .button:hover::after {
+    transform: scale(0)
+  }
+  
+  .button:hover {
+    box-shadow: inset 0px 0px 25px #1479EA;
+  }
